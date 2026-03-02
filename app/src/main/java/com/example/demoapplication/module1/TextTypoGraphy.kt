@@ -1,5 +1,6 @@
 package com.example.demoapplication.module1
 
+import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Text
@@ -57,5 +58,16 @@ fun ColorFullText() {
             }
             append("\nI am learning Jetpack Compose")
         })
+    }
+}
+
+@Composable
+fun ScrollableText() {
+    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+        Text(
+            text = "Hello Jetpack Compose, I am learning Jetpack Compose (Native Android Developers)",
+            modifier = Modifier.basicMarquee(),
+            fontSize = 30.sp
+        )
     }
 }
