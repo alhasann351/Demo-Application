@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.example.demoapplication.module1.ResourceShow
+import com.example.demoapplication.module1.SimpleText
 import com.example.demoapplication.ui.theme.DemoApplicationTheme
 
 class MainActivity : ComponentActivity() {
@@ -14,7 +14,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             DemoApplicationTheme {
                 //Greeting()
-                ResourceShow()
+                //ResourceShow()
+                SimpleText()
             }
         }
     }
