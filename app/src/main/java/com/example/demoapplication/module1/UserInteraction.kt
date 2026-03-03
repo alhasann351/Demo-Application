@@ -10,13 +10,18 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.text.LinkAnnotation
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.TextLinkStyles
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.withLink
 import androidx.compose.ui.unit.sp
 
 @Composable
 fun SelectableText() {
-    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center)
-    {
+    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         SelectionContainer {
             Column {
                 Text("Selection Text", style = TextStyle(color = Color.Black, fontSize = 30.sp))
@@ -36,5 +41,29 @@ fun SelectableText() {
                 }
             }
         }
+    }
+}
+
+@Composable
+fun AnnotatedStringWithListener() {
+    val uriHandler = LocalUriHandler.current
+
+    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+        Text(buildAnnotatedString {
+            append("Learn Jetpack Compose")
+            val link = LinkAnnotation.Url(
+                "https://developer.android.com/compose", TextLinkStyles(
+                    SpanStyle(
+                        color = Color.Blue
+                    )
+                )
+            ) {
+                val url = (it as LinkAnnotation.Url).url
+                uriHandler.openUri(url)
+            }
+            withLink(link) {
+                append(" Click Here")
+            }
+        })
     }
 }
