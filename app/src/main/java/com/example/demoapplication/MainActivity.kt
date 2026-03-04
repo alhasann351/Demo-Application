@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.example.demoapplication.module1.AnnotatedStringWithListener
+import com.example.demoapplication.module1.FilledButtonExample
 import com.example.demoapplication.ui.theme.DemoApplicationTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,7 +21,8 @@ class MainActivity : ComponentActivity() {
                 //FirstOutlineTextField()
                 //SimplePasswordTextField()
                 //SelectableText()
-                AnnotatedStringWithListener()
+                //AnnotatedStringWithListener()
+                FilledButtonExample()
             }
         }
     }
