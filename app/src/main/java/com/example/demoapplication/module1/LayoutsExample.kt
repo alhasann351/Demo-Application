@@ -3,6 +3,7 @@ package com.example.demoapplication.module1
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
@@ -23,6 +24,19 @@ fun ColumnExample() {
         verticalArrangement = Arrangement.Center
     ) {
         Text("padding(horizontal = 15.dp, vertical = 10.dp) texrccccc(horizontal = 15.dp, vertical = 10.dp)")
+        Text("Text 2")
+        Text("Text 3")
+        Text("Text 4")
+    }
+}
+
+@Composable
+fun RowExample() {
+    Row(
+        modifier = Modifier.fillMaxSize(),
+        horizontalArrangement = Arrangement.SpaceEvenly,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
         Text("Text 2")
         Text("Text 3")
         Text("Text 4")
