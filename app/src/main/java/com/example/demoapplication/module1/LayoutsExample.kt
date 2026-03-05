@@ -2,10 +2,12 @@ package com.example.demoapplication.module1
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -40,5 +42,30 @@ fun RowExample() {
         Text("Text 2")
         Text("Text 3")
         Text("Text 4")
+    }
+}
+
+@Composable
+fun BoxExample() {
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Box(
+            modifier = Modifier
+                .size(width = 200.dp, height = 200.dp)
+                .background(Color.Green),
+            contentAlignment = Alignment.Center,
+        ) {
+            Box(
+                modifier = Modifier
+                    .size(width = 150.dp, height = 150.dp)
+                    .background(Color.Red),
+                contentAlignment = Alignment.Center,
+            ) {
+                Text("Demo")
+            }
+        }
     }
 }
