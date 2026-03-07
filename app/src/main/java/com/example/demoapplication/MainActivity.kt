@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.example.demoapplication.module1.InputChipsExample
+import com.example.demoapplication.module1.DialogWithImage
 import com.example.demoapplication.ui.theme.DemoApplicationTheme
 
 class MainActivity : ComponentActivity() {
@@ -33,7 +33,8 @@ class MainActivity : ComponentActivity() {
                 //BottomSheetExample()
                 //ElevatedCardExample()
                 //CheckBoxExample()
-                InputChipsExample()
+                //InputChipsExample()
+                DialogWithImage()
             }
         }
     }
