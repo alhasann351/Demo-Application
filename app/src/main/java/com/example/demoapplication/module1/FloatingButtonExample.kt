@@ -23,7 +23,7 @@ fun FloatingActionButtonExample() {
                 Icon(Icons.Filled.Add, contentDescription = "Add")
             },
             text = {
-                Text("Floating Action Button")
+                Text("Floating Action Button Floating Action Button")
             }
         )
     }
