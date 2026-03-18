@@ -4,8 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.example.demoapplication.module1.CircularIndicator
-import com.example.demoapplication.module1.NavigationDrawerExample
+import com.example.demoapplication.module1.PullToRefresh
 import com.example.demoapplication.ui.theme.DemoApplicationTheme
 
 class MainActivity : ComponentActivity() {
@@ -40,7 +39,8 @@ class MainActivity : ComponentActivity() {
                 //MenusExample()
                 //ScaffoldExample()
                 //NavigationDrawerExample()
-                CircularIndicator()
+                //CircularIndicator()
+                PullToRefresh()
             }
         }
     }
