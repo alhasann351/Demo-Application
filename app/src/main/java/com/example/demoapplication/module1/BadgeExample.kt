@@ -53,9 +53,3 @@ fun BadgeExe() {
         }
     }
 }
-
-@Composable
-@Preview(showBackground = true, showSystemUi = true)
-fun BadgeExePreview() {
-    BadgeExe()
-}
