@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import com.example.demoapplication.module1.BadgeExe
 import com.example.demoapplication.module1.SnackBarAction
 import com.example.demoapplication.ui.theme.DemoApplicationTheme
 
@@ -44,7 +45,8 @@ class MainActivity : ComponentActivity() {
                 //SearchBarExample()
                 //SegmentedButtonExp()
                 //SliderExp()
-                SnackBarAction()
+                //SnackBarAction()
+                BadgeExe()
             }
         }
     }
