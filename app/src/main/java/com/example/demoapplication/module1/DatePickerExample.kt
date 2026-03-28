@@ -63,7 +63,8 @@ fun DatePickerExe() {
                             onClick = {
                                 val millis = datePickerState.selectedDateMillis
                                 if (millis != null) {
-                                    val formatter = SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
+                                    val formatter =
+                                        SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
                                     selectedDateText = formatter.format(Date(millis))
                                 }
                                 showDatePicker = false
